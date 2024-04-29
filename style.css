@@ -1,0 +1,78 @@
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px rgba(rgb(229, 99, 99), rgb(171, 239, 171), rgb(25, 25, 39), .8);
+    border-radius: 12px;
+    background-color: rgba(25, 25, 39,1);
+    color: aliceblue;
+}
+
+.logo{
+    width: 120px;
+}
+
+.nav-items ul{
+    display: flex;
+    padding-right: 50px;
+}
+.nav-items ul li{
+    padding: 15px;
+    margin: 15px;
+    list-style: none;
+    font-size: 17px;
+
+}
+
+.res-Card{
+    height: 380px; 
+    width: 280px; 
+    box-shadow: rgb(66, 93, 122) 0px 20px 110px -10px;
+    background: border-box;
+    border-radius: 12px;
+    margin: 20px;
+}
+.res-Card:hover{
+    box-shadow: rgb(66, 93, 122) 0px 20px 110px -10px;
+    translate: 2px 4px 6px;
+    transition: .25s;
+    cursor: pointer;
+}
+.res-Card h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.res-Card h4{
+    margin: 4px 15px;
+    color: rgba(25, 25, 39,.8);
+}
+.card-img{
+    height: 200px ;
+    width: 240px;
+    background-color: rgb(132, 59, 109);
+    border-radius: 12px;
+    margin-left: 17px;
+    margin-top: 12px;
+    background-size: cover;
+    
+    
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    align-items: start;
+    justify-content: start;
+    
+}
+.body{
+    /* width: 100%; */
+    margin-left: 70px;
+}
+

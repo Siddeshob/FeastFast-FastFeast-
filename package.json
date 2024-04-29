@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "name": "foodapp",
+  "description": "is my first food app ,manually installed dependencyes,npm init,nim install,npn -D parcel",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "food"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siddeshob/FoodApp-React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siddeshob/FoodApp-React/issues"
+  },
+  "homepage": "https://github.com/Siddeshob/FoodApp-React#readme"
+}

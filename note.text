@@ -1,0 +1,21 @@
+props:- when we have to dynamically pass data to component we pass  it as a props.
+
+    <ResCards name="food cart" items="Masale Dose,Benne Dose,Neer Dose"/>
+              -----            -------
+    const ResCards=(props)=>{
+    console.log(props)
+    return(
+        <div  className="res-Card">
+            <img src='' alt='' className='card-img' />
+            <h3>{props.name}</h3>
+                -------------
+            <h4>{props.items}</h4>
+                -------------
+    )
+    }
+................................
+config driven UI
+
+
+
+
