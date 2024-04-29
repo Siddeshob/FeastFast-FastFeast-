@@ -16,6 +16,15 @@ props:- when we have to dynamically pass data to component we pass  it as a prop
 ................................
 config driven UI
 
+-------------------------------------------tutorial 5 -------------------------
+exports 2 types 
+    1.named exports;
+    1.default export
 
-
-
+-------------------------------------------react hooks 5 ---
+#react hooks
+they r normal js utility fun's
+1.useStare  : when state variabel upadtes react reRender the components
+............
+1.useEffects
+............
