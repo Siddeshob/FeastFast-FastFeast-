@@ -26,5 +26,9 @@ exports 2 types
 they r normal js utility fun's
 1.useStare  : when state variabel upadtes react reRender the components
 ............
-1.useEffects
+1.useEffects : when body component is render useEffects is called
 ............
+
+Virtuale DOM: is a representation of acutal DOM
+-------------
+

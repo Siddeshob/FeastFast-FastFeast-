@@ -197,7 +197,7 @@ const resObjList = [
         name: "McCafe by McDonald's",
         cloudinaryImageId: "bqahuozuzz8xdaerbky9",
         locality: "2nd Stage",
-        areaName: "Banashankari",
+        areaName: "Banashankari",   
         costForTwo: "₹250 for two",
         cuisines: ["Beverages", "Desserts"],
         avgRating: 4.9,
