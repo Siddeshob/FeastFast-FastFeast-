@@ -1,6 +1,7 @@
 import ResCards from "./ResCards";
 import { useState, useEffect } from "react";
 import resObjList from "./utils/mockData";
+import Shimmer from "./utils/Shimmer";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(resObjList);
@@ -12,40 +13,17 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&collection=83646&tags=layout_CCS_SouthIndian&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json)
+    console.log(json);
     console.log(json.data.cards[3]);
-    setListOfRestaurants(json.data.cards[5].card.card.info);
+    //setListOfRestaurants(json?.data?.cards[5]?.card?.card?.info);
   };
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  if (listOfRestaurants === 0) {
+    return <Shimmer />;
+  }
   const handleFilterClick = () => {
     const filteredList = listOfRestaurants.filter(
       (res) => res.info.avgRating < 4
