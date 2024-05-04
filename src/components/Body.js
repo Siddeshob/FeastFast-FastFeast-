@@ -4,8 +4,8 @@ import resObjList from "./utils/mockData";
 import Shimmer from "./utils/Shimmer";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resObjList);
-  const [filterRestorent,setFilterRestorent]=useState([])
+  const [listOfRestaurants, setListOfRestaurants] = useState();
+  const [filterRestorent, setFilterRestorent] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
@@ -18,10 +18,12 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
-    console.log(json.data.cards[3]);
-    //setListOfRestaurants(json?.data?.cards[5]?.card?.card?.info);
-    setFilterRestorent(resObjList)
+    console.log("----->>>" +json?.data?.cards[4]?.card.card.gridElements.infoWithStyle.restaurants);
+    
+    setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+    setFilterRestorent(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+ 
   };
 
   if (listOfRestaurants === 0) {
@@ -52,8 +54,8 @@ const Body = () => {
               // filter the card and update UI
               //searchText
               console.log(searchText);
-              var filterdeResult = listOfRestaurants.filter(
-                (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              var filterdeResult = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setFilterRestorent(filterdeResult);
             }}
