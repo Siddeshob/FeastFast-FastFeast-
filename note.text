@@ -27,8 +27,25 @@ they r normal js utility fun's
 1.useStare  : when state variabel upadtes react reRender the components
 ............
 1.useEffects : when body component is render useEffects is called
+               * is called every render of the component
+               *if no dependency array is called on every render
+               *if dependency array[] is empty is called only initial render or only once
+               * if dependency array[] have value, it will called every time when value will change
 ............
 
 Virtuale DOM: is a representation of acutal DOM
 -------------
 
+
+-------------------------------------------tutorial 7 -------------------------
+
+npm i react-router-dom
+we import : createBrowserRouter, RouterProvider from react-router-dom
+
+rafce: shortcut for creating components inside code
+Outlet : import Outlet and we fix the header on every page
+Link: routing pages
+
+# 2 types od routing
+1.server side routing
+2.clint side routing : components are interchange 
