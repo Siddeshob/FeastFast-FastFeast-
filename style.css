@@ -27,8 +27,18 @@
     list-style: none;
     font-size: 17px;
     text-decoration: none;
-
 }
+.nav-items ul li a{
+    color: rgba(255, 255, 255, 0.8);
+}
+body {
+    text-decoration: none;
+  }
+  
+  /* Remove underlines from specific elements, like links */
+  a {
+    text-decoration: none;
+  }
 
 .res-Card{
     height: 390px; 
@@ -48,10 +58,13 @@
     display: flex;
     justify-content: center;
     margin-top: 5px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
 }
 .res-Card h4{
     margin: 4px 15px;
     color: rgba(25, 25, 39,.8);
+    text-decoration: none;
 }
 .card-img{
     height: 200px ;
@@ -91,4 +104,14 @@
     border-radius: 12px;
     margin: 20px;
     background-color: #f0f0f0;
+}
+.about{
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+.contact{
+    height: 100vh;
+    width: 100%;
+    background-color: #918c8c;
 }
