@@ -49,3 +49,13 @@ Link: routing pages
 # 2 types od routing
 1.server side routing
 2.clint side routing : components are interchange 
+
+-------------------------------------------tutorial 8 -------------------------
+
+                                        class based components 
+                                        ----------------------
+we use constructer inside super() method: because child class are override the parent class. using super() method
+ parent class before child class called. *parent call first for meantine its behavior*.
+
+
+
