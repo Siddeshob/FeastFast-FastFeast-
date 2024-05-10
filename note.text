@@ -57,5 +57,20 @@ Link: routing pages
 we use constructer inside super() method: because child class are override the parent class. using super() method
  parent class before child class called. *parent call first for meantine its behavior*.
 
+    Life cycle of Class component
+    -----------------------------
+    1.constructer()
+    2.render()
+    3.componentDidMount()
+
+-------------------------------------------tutorial 09 ------------------------------
+                                Custom hooks
+                             ------------------
+Single Responsability Principle: each component have single Responsability
+
+#code Splitting
+#Dynamic bundling
+#Chunking
+
 
 

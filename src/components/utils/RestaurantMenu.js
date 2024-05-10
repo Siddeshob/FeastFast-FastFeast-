@@ -3,28 +3,33 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "./constants";
+import useRestaurantMenu from "./useRestaurantMenu";
 
 
 const RestaurantMenu = () => {
 
-  const [resInfo, setResInfo] = useState(null);
+  // const [resInfo, setResInfo] = useState(null);
 
-  const {resId}=useParams();
+   const {resId}=useParams();
+
+  // is our custome Hook
+  const resInfo=useRestaurantMenu(resId)
 
 
+  // useEffect(() => {
+  //   fetchMenu();
+  // }, []);
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  // fetchMenu = async () => {
+  //   var data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId="+resId+"&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER");
+  //   var json = await data.json();
 
-  fetchMenu = async () => {
-    var data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId="+resId+"&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER");
-    var json = await data.json();
+  //   console.log(json);
+  //   console.log(json?.data?.cards[2]?.card?.card?.info.name);
+  //   setResInfo(json.data);
+  // };
 
-    console.log(json);
-    console.log(json?.data?.cards[2]?.card?.card?.info.name);
-    setResInfo(json.data);
-  };
+
   if (resInfo == null) return <Shimmer />;
 
   //resInfo?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants.info.name
