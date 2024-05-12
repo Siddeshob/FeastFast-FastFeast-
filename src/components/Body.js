@@ -58,18 +58,19 @@ if(onlineStatus===false)
   }
 
   return (
-    <div className="body">
-      <div className="filter">
-        <div className="search">
+    <div className=" ">
+      <div className="flex ml-20">
+        <div className=" m-4 p-2">
           <input
             type="text"
-            className="search-box"
+            className="w-72 mr-4 h-6 bg-zinc-100 border border-gray-400 rounded-lg p-4" 
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
+            className="bg-blue-500 w-24 border rounded-lg h-9"
             onClick={() => {
               // filter the card and update UI
               //searchText
@@ -83,11 +84,11 @@ if(onlineStatus===false)
             Search
           </button>
         </div>
-        <button className="filter-btn" onClick={handleFilterClick}>
+        <button className=" bg-indigo-300 w-48 mt-6 border rounded-lg h-9" onClick={handleFilterClick}>
           Top Rated Restaurants
         </button>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap h-20 justify-center items-center ">
         {filterRestorent.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}
