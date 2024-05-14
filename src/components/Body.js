@@ -1,4 +1,4 @@
-import ResCards from "./ResCards";
+import ResCards,{withPromotedLable} from "./ResCards";
 import { useState, useEffect } from "react";
 import resObjList from "./utils/mockData";
 import Shimmer from "./utils/Shimmer";
@@ -11,8 +11,10 @@ const Body = () => {
   const [filterRestorent, setFilterRestorent] = useState([]);
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantsCardPromoted=withPromotedLable(ResCards);
+
   useEffect(() => {
-    console.log("is useEffect");
+    console.log("is useEffect",listOfRestaurants);
     fetchData();
   }, []);
 
@@ -51,7 +53,7 @@ if(onlineStatus===false)
     return <h1>Looks your offline</h1>
   }
   
-
+  console.log("is useEffect",listOfRestaurants);
   
   if (listOfRestaurants == null) {
     return <Shimmer />;
@@ -94,7 +96,8 @@ if(onlineStatus===false)
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant.info.id}
           >
-            <ResCards resData={restaurant} />
+            {restaurant.info.isOpen ? (<RestaurantsCardPromoted resData={restaurant}/>) : (<ResCards resData={restaurant}/>)}
+            {/* <ResCards resData={restaurant} /> */}
           </Link>
         ))}
       </div>

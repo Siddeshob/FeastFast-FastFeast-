@@ -21,4 +21,23 @@ const ResCards = (props) => {
     </div>
   );
 };
+
+//higher order Component
+// i/p-ResCards ==>>ResCardsPromoted
+
+export const withPromotedLable=(ResCards)=>{
+  
+  return (props)=>{
+    return(
+      <div>
+        <label className="absolute m-6 px-4 bg-slate-800 text-amber-300 rounded-md" >isOpen</label>
+        <ResCards {...props}/>
+      </div>
+    )
+  }
+
+}
+
+
+
 export default ResCards;
