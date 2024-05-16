@@ -11,13 +11,11 @@ import RestaurantMenu from "./components/utils/RestaurantMenu";
 
 //-------------------------------------------------------------------------------------------
 
-const Grocery=lazy(()=>import("./components/Grocery"))
-
-
-
-
+const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
+
+
   return (
     <div>
       <Header />
@@ -42,19 +40,35 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Suspense fallback={<h1>loodeing....</h1>} ><Contact/></Suspense>,
+        element: (
+          <Suspense fallback={<h1>loodeing....</h1>}>
+            <Contact />
+          </Suspense>
+        ),
       },
       {
-        path:"/home",
-        element:<Suspense fallback={<h1>loodeing....</h1>} ><Body/></Suspense>
+        path: "/home",
+        element: (
+          <Suspense fallback={<h1>loodeing....</h1>}>
+            <Body />
+          </Suspense>
+        ),
       },
       {
-        path:"/restaurants/:resId",
-        element:<Suspense fallback={<h1>loodeing....</h1>} ><RestaurantMenu/></Suspense>
+        path: "/restaurants/:resId",
+        element: (
+          <Suspense fallback={<h1>loodeing....</h1>}>
+            <RestaurantMenu />
+          </Suspense>
+        ),
       },
       {
-        path:"/grocery",
-        element:<Suspense fallback={<h1>loodeing....</h1>} ><Grocery/></Suspense> ,
+        path: "/grocery",
+        element: (
+          <Suspense fallback={<h1>loodeing....</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
       },
     ],
     errorElement: <Error />,

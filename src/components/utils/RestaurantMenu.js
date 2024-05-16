@@ -15,7 +15,7 @@ const RestaurantMenu = () => {
 
   // is our custome Hook
   const resInfo=useRestaurantMenu(resId)
-
+  const[showIndex,setshowIndex]=useState(0)
 
   // useEffect(() => {
   //   fetchMenu();
@@ -58,7 +58,12 @@ const RestaurantMenu = () => {
       </ul>
 
       {/* create Accordions */}
-      {cetegories.map((cetegory)=>(<ResCategory key={cetegory?.card?.info?.name} data={cetegory?.card?.card} />))}
+      {cetegories.map((cetegory,index)=>(<ResCategory key={cetegory?.card?.info?.name}
+       data={cetegory?.card?.card} 
+       showItem={index==showIndex?true:false} 
+       setshowIndex={()=>setshowIndex(index)}
+       
+       />))}
     </div>
   );
 };
