@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// redux use immer in begind
 const cartSlice = createSlice({
     name: "cart",
     initialState: {
@@ -10,7 +11,7 @@ const cartSlice = createSlice({
             state.items.push(action.payload);
         },
         removeItem: (state) => {
-            state.items.pop();
+            state.items.shift();
         },
         clearCart: (state) => {
             state.items.length = 0;
