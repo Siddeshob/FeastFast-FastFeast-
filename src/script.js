@@ -7,6 +7,9 @@ import About from "./components/utils/About";
 import Contact from "./components/utils/Contact";
 import Error from "./components/utils/Error";
 import RestaurantMenu from "./components/utils/RestaurantMenu";
+import { Provider } from "react-redux";
+import appStore from "./components/utils/AppStore";
+import Cart from "./components/utils/Cart";
 // import Grocery from "./components/Grocery";
 
 //-------------------------------------------------------------------------------------------
@@ -14,13 +17,13 @@ import RestaurantMenu from "./components/utils/RestaurantMenu";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
-
-
   return (
     <div>
-      <Header />
-      <Outlet />
-      {/* <Body /> */}
+      <Provider store={appStore}>
+        <Header />
+        <Outlet />
+        {/* <Body /> */}
+      </Provider>
     </div>
   );
 };
@@ -69,6 +72,12 @@ const appRouter = createBrowserRouter([
             <Grocery />
           </Suspense>
         ),
+      },
+      {
+        path:"/cart",
+        element:(
+            <Cart/>
+        )
       },
     ],
     errorElement: <Error />,

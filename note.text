@@ -73,4 +73,13 @@ Single Responsability Principle: each component have single Responsability
 #Chunking
 
 
-
+-------------------------------------------tutorial 12 ------------------------------
+                                    Redux
+                             ------------------
+Redux ToolKit
+-install @reduxjs/toolkit and react-redux
+-Build our store
+-connect our store to our app
+-Slice(cartSlice)
+-dispature(Action)
+-selector
