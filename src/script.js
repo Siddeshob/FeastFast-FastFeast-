@@ -8,7 +8,7 @@ import Contact from "./components/utils/Contact";
 import Error from "./components/utils/Error";
 import RestaurantMenu from "./components/utils/RestaurantMenu";
 import { Provider } from "react-redux";
-import appStore from "./components/utils/AppStore";
+import appStore from "./components/utils/appStore";
 import Cart from "./components/utils/Cart";
 // import Grocery from "./components/Grocery";
 

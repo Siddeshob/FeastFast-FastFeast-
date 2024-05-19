@@ -11,11 +11,10 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const { loggedInUser } = useContext(UserContext);
- // console.log(loggedInUser);
+  console.log(loggedInUser);
 
   // we subscribing to the store using selector
   const cartItems = useSelector((store) => store.cart.items);
-  // console.log(cartItems)
 
   return (
     <div className="flex justify-between bg-slate-700 shadow-2xl text-slate-300 ">
@@ -47,7 +46,7 @@ const Header = () => {
               loginBtn == "Login"
                 ? setLoginButton("Logout")
                 : setLoginButton("Login");
-             // console.log(loginBtn);
+              console.log(loginBtn);
             }}
           >
             {loginBtn}
