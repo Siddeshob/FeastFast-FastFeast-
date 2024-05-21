@@ -2,6 +2,7 @@ import { CDN_URL } from "./utils/constants";
 
 const ResCards = (props) => {
   const { resData } = props;
+  // console.log(resData)
   //destructure the data
   const { name, cuisines, areaName, avgRating, costForTwo } = resData?.info;
   return (

@@ -78,8 +78,44 @@ Single Responsability Principle: each component have single Responsability
                              ------------------
 Redux ToolKit
 -install @reduxjs/toolkit and react-redux
+
 -Build our store
 -connect our store to our app
 -Slice(cartSlice)
 -dispature(Action)
 -selector
+-------------------------------------------tutorial 12 ------------------------------
+                                    Testing
+                             ------------------
+-Unit Testing
+-Integration Testing
+-End-To-End Testing
+
+-library's # setting up Testing
+---------
+npm i -D @testing-library/react
+npm i jest
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+install babel dependencies
+config babel(babel.config.js)
+config parcel config file to disable default babel transpilation
+jest config (npx jest --init) -
+                            -jsDom :- envirnoment to run test Cases
+                            --------
+Install JsDom library
+install @babel/preset-react (npm i -D @babel/preset-react) :- to work jsx in test cases
+include @babel/preset-react inside my babel config
+install @testing-library/jest-dom(npm i -D @testing-library/jest-dom)
+ex: 
+    test('should load button in contact component', () => { 
+        render(<Contact/>);
+        const heading=screen.getByPlaceholderText('name')
+
+        expect(heading).toBeInTheDocument();
+    })
+
+
+
+
+
+

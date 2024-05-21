@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    " duxjs/toolkit": "^2.2.5",
+    "@reduxjs/toolkit": "^2.2.5",
     "cors": "^2.8.5",
     "parcel": "^2.12.0",
     "react": "^18.3.1",
@@ -13,6 +13,14 @@
   "version": "1.0.0",
   "main": "script.js",
   "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.38",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.3"
@@ -20,7 +28,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "food"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

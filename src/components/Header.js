@@ -11,7 +11,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const { loggedInUser } = useContext(UserContext);
-  console.log(loggedInUser);
+  // console.log(loggedInUser);
 
   // we subscribing to the store using selector
   const cartItems = useSelector((store) => store.cart.items);
@@ -46,7 +46,7 @@ const Header = () => {
               loginBtn == "Login"
                 ? setLoginButton("Logout")
                 : setLoginButton("Login");
-              console.log(loginBtn);
+              // console.log(loginBtn);
             }}
           >
             {loginBtn}
