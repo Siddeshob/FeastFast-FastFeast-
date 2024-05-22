@@ -42,12 +42,10 @@ const Body = () => {
     return <h1>Looks your offline</h1>;
   }
 
-  if (listOfRestaurants == null) {
-    return <Shimmer />;
-  }
+  if (!listOfRestaurants == null) return <Shimmer />;
 
   return (
-    <div className=" ">
+    <div className=" " data-testid="bodyidOne">
       <div className="flex ml-20">
         <div className=" m-4 p-2">
           <input
@@ -74,13 +72,14 @@ const Body = () => {
           </button>
         </div>
         <button
+        data-testid="ratedIdBtn"
           className=" bg-indigo-300 w-48 mt-6 border rounded-lg h-9"
           onClick={handleFilterClick}
         >
           Top Rated Restaurants
         </button>
       </div>
-      <div className="flex flex-wrap h-20 justify-center items-center ">
+      <div data-testid='resCardBody' className="flex flex-wrap h-20 justify-center items-center ">
         {filterRestorent.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}

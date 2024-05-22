@@ -115,6 +115,9 @@ ex:
     })
 
 
+Link : wrap inside the <BrowserRouter></BrowserRouter>
+
+
 
 
 

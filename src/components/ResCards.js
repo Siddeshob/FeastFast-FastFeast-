@@ -6,7 +6,7 @@ const ResCards = (props) => {
   //destructure the data
   const { name, cuisines, areaName, avgRating, costForTwo } = resData?.info;
   return (
-    <div className="flex justify-center items-center bg-gray-300 m-3 p-3 border rounded-2xl  h-[557px] w-[350px] hover:scale-105 transition-transform ">
+    <div  data-testid='resCard' className="flex justify-center items-center bg-gray-300 m-3 p-3 border rounded-2xl  h-[557px] w-[350px] hover:scale-105 transition-transform ">
       <div className=" text-center ">
         <img
           className=" border border rounded-2xl  "
